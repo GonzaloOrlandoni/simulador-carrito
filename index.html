@@ -9,11 +9,23 @@
   <body>
     <div class="container">
       <h1>Simulador de Carrito de Compras</h1>
-      <p>
-        Este simulador permite listar productos, agregarlos al carrito, eliminar items, aplicar cupones y finalizar
-        compras. La interacción principal se realiza mediante la consola y cuadros de diálogo (Prompt, Confirm, Alert).
-      </p>
-      <p>¡Bienvenido! Abra la consola (F12 → Console) y comience usando el simulador.</p>
+      <p>Agrega productos al carrito, aplica cupones y finaliza tu compra.</p>
+
+      <!-- Productos -->
+      <h2>Productos disponibles</h2>
+      <div id="productos" class="productos"></div>
+
+      <!-- Carrito -->
+      <h2>Carrito</h2>
+      <div id="carrito"></div>
+      <p id="total">Total: $0</p>
+
+      <!-- Cupón -->
+      <input type="text" id="cupon" placeholder="Ingresa un cupón (AHORRO10 o ALUMNO20)" />
+      <button id="aplicarCupon">Aplicar cupón</button>
+
+      <!-- Finalizar -->
+      <button id="finalizar">Finalizar compra</button>
     </div>
 
     <script src="./js/simulador.js"></script>
