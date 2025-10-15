@@ -22,11 +22,10 @@ Este proyecto fue desarrollado cumpliendo con todos los requisitos solicitados e
     -   `localStorage` para persistencia de datos
     -   Funciones asíncronas (`async/await`) con `fetch`
 
-## Cómo Probar el Proyecto 🚀
+### 🚀 Demo en Vivo
 
-1.  Clona o descarga este repositorio en tu computadora.
-2.  Abre el archivo `index.html` en tu navegador web.
-3.  ¡Listo! Ya puedes interactuar con el simulador.
+**Puedes visitar la versión online aquí:** https://simulador-carrito.vercel.app/
+
 
 ---
 
