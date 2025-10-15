@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+   
   <head>
+       
     <meta charset="UTF-8" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
     <title>Simulador de Carrito de Compras</title>
+       
     <link rel="stylesheet" href="./css/style.css" />
+
+           
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+       
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     
   </head>
+   
   <body>
+       
     <div class="container">
+           
       <h1>Simulador de Carrito de Compras</h1>
+           
       <p>Agrega productos al carrito, aplica cupones y finaliza tu compra.</p>
 
-      <!-- Productos -->
+                 
       <h2>Productos disponibles</h2>
+           
       <div id="productos" class="productos"></div>
 
-      <!-- Carrito -->
+                 
       <h2>Carrito</h2>
+           
       <div id="carrito"></div>
+           
       <p id="total">Total: $0</p>
 
-      <!-- Cupón -->
-      <input type="text" id="cupon" placeholder="Ingresa un cupón (AHORRO10 o ALUMNO20)" />
+                  <input type="text" id="cupon" placeholder="Ingresa un cupón (AHORRO10 o ALUMNO20)" />      
       <button id="aplicarCupon">Aplicar cupón</button>
 
-      <!-- Finalizar -->
-      <button id="finalizar">Finalizar compra</button>
+                  <button id="finalizar">Finalizar compra</button>    
     </div>
 
+       
     <script src="./js/simulador.js"></script>
+     
   </body>
 </html>

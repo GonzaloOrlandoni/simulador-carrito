@@ -31,12 +31,12 @@ function renderizarProductos(productos) {
     const div = document.createElement("div");
     div.classList.add("producto");
     div.innerHTML = `
-      <h3>${p.nombre}</h3>
-      <p>${moneda(p.precio)}</p>
-    `;
+      <h3>${p.nombre}</h3>
+      <p>${moneda(p.precio)}</p>
+    `;
     const boton = document.createElement("button");
     boton.innerText = "Agregar";
-    boton.addEventListener("click", () => agregarAlCarrito(p, productos)); // Pasamos el objeto producto completo
+    boton.addEventListener("click", () => agregarAlCarrito(p));
     div.appendChild(boton);
     contenedor.appendChild(div);
   });
@@ -52,11 +52,11 @@ function renderizarCarrito() {
   }
   carrito.forEach((item, index) => {
     const div = document.createElement("div");
-    div.classList.add("carrito-item"); // Clase para estilizar si se desea
+    div.classList.add("carrito-item");
     div.innerHTML = `
-      <span>${item.cantidad} x ${item.nombre} - ${moneda(item.precio * item.cantidad)}</span>
-      <button class="btn-eliminar">❌</button>
-    `;
+      <span>${item.cantidad} x ${item.nombre} - ${moneda(item.precio * item.cantidad)}</span>
+      <button class="btn-eliminar">❌</button>
+    `;
     div.querySelector(".btn-eliminar").addEventListener("click", () => eliminarDelCarrito(index));
     contenedor.appendChild(div);
   });
@@ -77,9 +77,8 @@ function agregarAlCarrito(producto) {
     carrito.push({ ...producto, cantidad: 1 });
   }
   guardarCarrito();
-  renderizarCarrito();
+  renderizarCarrito(); // Notificación Toastify
 
-  // Notificación Toastify
   Toastify({
     text: `Se agregó "${producto.nombre}" al carrito`,
     duration: 2000,
@@ -94,9 +93,8 @@ function eliminarDelCarrito(index) {
   const itemEliminado = carrito[index];
   carrito.splice(index, 1);
   guardarCarrito();
-  renderizarCarrito();
+  renderizarCarrito(); // Notificación Toastify
 
-  // Notificación Toastify
   Toastify({
     text: `Se eliminó "${itemEliminado.nombre}" del carrito`,
     duration: 2000,
@@ -122,7 +120,7 @@ function aplicarCupon() {
     });
   } else {
     descuento = 0;
-    document.getElementById("cupon").value = ""; // Limpiar si es inválido
+    document.getElementById("cupon").value = "";
     Swal.fire({
       icon: "error",
       title: "Cupón inválido",
@@ -182,30 +180,6 @@ async function fetchProductos() {
   }
 }
 
-// Se agregan las librerías al HTML desde JS para mantener el HTML limpio
-function agregarLibrerias() {
-  const head = document.querySelector("head");
-
-  // SweetAlert2
-  const sweetAlertScript = document.createElement("script");
-  sweetAlertScript.src = "https://cdn.jsdelivr.net/npm/sweetalert2@11";
-
-  // Toastify JS
-  const toastifyScript = document.createElement("script");
-  toastifyScript.src = "https://cdn.jsdelivr.net/npm/toastify-js";
-
-  // Toastify CSS
-  const toastifyCSS = document.createElement("link");
-  toastifyCSS.rel = "stylesheet";
-  toastifyCSS.type = "text/css";
-  toastifyCSS.href = "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css";
-
-  head.appendChild(sweetAlertScript);
-  head.appendChild(toastifyScript);
-  head.appendChild(toastifyCSS);
-}
-
 // --- EJECUCIÓN ---
-agregarLibrerias();
 // Esperamos a que el DOM esté completamente cargado para ejecutar el script
 document.addEventListener("DOMContentLoaded", inicializar);
