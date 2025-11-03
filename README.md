@@ -1,28 +1,28 @@
-# 🛒 Simulador Interactivo de Carrito de Compras (JS Puro)
+# 🛒 Entrega Coderhouse: Simulador de Carrito de Compras (JS Puro)
 
-_(Añadir captura de pantalla de la interfaz del carrito)_
+_(Añade aquí una captura de pantalla de la interfaz del carrito)_
 
-**Sitio en vivo:** https://es.wikipedia.org/wiki/Diagrama_de_despliegue
+**Sitio en vivo:** [Añade el enlace de tu despliegue en Vercel o GitHub Pages]
 
 ---
 
-## 🎯 OBJETIVO: Lógica de E-commerce Funcional
+## 🎯 OBJETIVO: Lógica de Aplicación y Persistencia de Datos
 
-Este proyecto está enfocado en demostrar la **lógica de negocio** necesaria para cualquier aplicación de comercio electrónico. El objetivo fue construir un carrito de compras completamente funcional utilizando **JavaScript puro** (Vanilla JS).
+Este proyecto demuestra la capacidad de implementar la **lógica de negocio** fundamental para cualquier aplicación interactiva, enfocándose en la manipulación del DOM y la persistencia del estado de la aplicación.
 
 ### Funcionalidades Clave:
 
-- **Gestión de Inventario:** Añadir, eliminar y actualizar la cantidad de productos en el carrito.
-- **Persistencia de Datos:** El estado del carrito (productos y totales) se mantiene al recargar la página utilizando **`localStorage`**.
-- **Cálculo Dinámico:** Recalcula el subtotal y el total de la compra en tiempo real ante cualquier cambio.
-- **Manipulación del DOM:** Demostración de cómo insertar, modificar y eliminar elementos de la interfaz de forma eficiente con JavaScript.
+- **Persistencia de Datos:** El estado completo del carrito (productos, cantidades y totales) se guarda y recupera utilizando la API **`localStorage`**.
+- **Manipulación del DOM:** Adición, eliminación y actualización dinámica de productos en el carrito utilizando JavaScript puro.
+- **Cálculo Dinámico:** Recálculo instantáneo del subtotal y el total de la compra ante cualquier interacción del usuario.
+- **JavaScript (Vanilla JS):** No se usaron librerías externas ni frameworks, demostrando dominio de la lógica del lenguaje.
 
 ## 💻 STACK TÉCNICO
 
 - **Tecnología Principal:** JavaScript (ES6+).
-- **Estructura:** HTML5 y CSS3.
 - **Persistencia:** `localStorage` API.
+- **Estructura:** HTML5 y CSS3.
 
 ---
 
-_Desarrollado para el portfolio de **GO Web Solutions**._
+_Entrega realizada para el curso de JavaScript en Coderhouse._
